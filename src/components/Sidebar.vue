@@ -1,12 +1,9 @@
 <template>
-  <v-navigation-drawer
-    fixed
-    permanent
-    left
-    dark
-  >
+  <v-navigation-drawer fixed permanent left dark>
     <h1 class="siglas">RF</h1>
-    <h2 class="subheading">Rafael Flores</h2>
+    <h2 class="subheading">
+      Rafael Flores
+    </h2>
 
     <v-btn
       v-for="button in headingButtons"
@@ -17,29 +14,18 @@
       block
       style="margin: 10px auto;"
     >
-      {{button}}
+      {{ button }}
     </v-btn>
 
-    <v-row
-      justify="center"
-    >
-      <v-col 
-        cols=6
-      >
-        <v-btn 
-          v-for="button in socialButtons"
-          :key="button"
-          icon
-        >
-          <v-icon
-            dark
-          >
-            mdi-facebook
+    <v-row justify="center">
+      <v-col cols="6">
+        <v-btn v-for="button in socialButtons" :key="button" icon>
+          <v-icon dark>
+            {{ button }}
           </v-icon>
         </v-btn>
       </v-col>
     </v-row>
-
   </v-navigation-drawer>
 </template>
 
@@ -48,22 +34,18 @@ export default {
   data() {
     return {
       headingButtons: [
-        'About Me',
-        'Services',
-        'Experience',
-        'Skills & Education',
-        'Portfolio',
-        'Clients',
-        'Contact'
+        "About Me",
+        "Services",
+        "Experience",
+        "Skills & Education",
+        "Portfolio",
+        "Clients",
+        "Contact",
       ],
-      socialButtons: [
-        'fb',
-        'lk',
-        'gh'
-      ]
-    }
-  }
-}
+      socialButtons: ["mdi-facebook", "mdi-linkedin", "mdi-github"],
+    };
+  },
+};
 </script>
 
 <style>

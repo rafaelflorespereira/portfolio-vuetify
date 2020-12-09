@@ -1,32 +1,21 @@
 <template>
   <v-app>
-    <sidebar/>
-    <v-row
-      fill-height
-      text-right
-    >
-      <v-img
-        src="../public/background-image.jpg"
-      >
-      </v-img>
-      <v-col justify="end">
-        <div>Rafael Flores</div>
-      </v-col>
-    </v-row>
+    <sidebar />
+    <my-header />
   </v-app>
 </template>
 
 <script>
-import Sidebar from './components/Sidebar'
+import Sidebar from "./components/Sidebar";
+import MyHeader from "./components/Header";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    Sidebar
-  }
-  ,
-
+    Sidebar,
+    MyHeader,
+  },
   data: () => ({
     //
   }),

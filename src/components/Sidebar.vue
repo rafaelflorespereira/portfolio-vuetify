@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer fixed permanent left dark>
+  <v-navigation-drawer app left dark>
     <h1 class="siglas">RF</h1>
     <h2 class="subheading">
       Rafael Flores
@@ -12,7 +12,7 @@
       dark
       small
       block
-      style="margin: 10px auto;"
+      style="margin: 1rem auto;"
     >
       {{ button }}
     </v-btn>

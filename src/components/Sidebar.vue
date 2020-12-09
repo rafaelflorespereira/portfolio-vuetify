@@ -4,7 +4,7 @@
     <h2 class="subheading">
       Rafael Flores
     </h2>
-
+    <div class="subheading__sub">Front-end Developer</div>
     <v-btn
       v-for="button in headingButtons"
       :key="button"
@@ -17,8 +17,8 @@
       {{ button }}
     </v-btn>
 
-    <v-row justify="center">
-      <v-col cols="6">
+    <v-row class="u-positioned-bottom">
+      <v-col cols="12">
         <v-btn v-for="button in socialButtons" :key="button" icon>
           <v-icon dark>
             {{ button }}
@@ -50,19 +50,33 @@ export default {
 
 <style>
 .siglas {
-  font-size: 6rem;
+  font-size: 4rem;
   color: #c5a880;
   margin: 0 auto;
-  padding: 0 20%;
+  margin-bottom: -1rem;
+  padding: 0 15%;
   display: block;
   text-align: center;
 }
 .subheading {
   color: #e6e6e6;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
+  margin: 1rem auto;
+  padding: 0 15%;
+  text-align: center;
+}
+.subheading__sub {
+  color: #e6e6e6;
+  text-align: center;
+  margin: 1rem;
+}
+.u-positioned-bottom {
+  position: absolute;
+  bottom: 1vh;
   margin: 0 auto;
-  padding: 0 20%;
+  left: 0;
+  right: 0;
   text-align: center;
 }
 </style>

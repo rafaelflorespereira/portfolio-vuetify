@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-img src="../../public/background-image2.jpg" height="100vh">
+    <v-img
+      src="../../public/laptop-red-cup-coffee-notebook-pen-satchel-1.jpg"
+      height="100vh"
+    >
       <div class="header__text">
         Rafael Flores
         <span class="header__colored">Front-end Developer</span>

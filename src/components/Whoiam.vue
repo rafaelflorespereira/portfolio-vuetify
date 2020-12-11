@@ -185,7 +185,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="4" v-for="i in 9" :key="i">
+      <v-col cols="4" v-for="i in 6" :key="i">
         <v-col>
           <v-icon large :color="colors.primary">
             mdi-message-text
@@ -206,17 +206,19 @@
         </v-col>
       </v-col>
     </v-row>
+    <div class="class u-bottom-spacing"></div>
 
-    <v-row>
-      <v-col>
-        <h1 class="viewport">Let's talk.</h1>
-      </v-col>
-    </v-row>
+    <reach-me />
   </v-container>
 </template>
 
 <script>
+import ReachMe from "./ReachMe";
+
 export default {
+  components: {
+    ReachMe,
+  },
   data() {
     return {
       colors: {

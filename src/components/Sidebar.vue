@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app left dark>
+  <v-navigation-drawer app permanent left dark>
     <h1 class="siglas">RF</h1>
     <h2 class="subheading">
       Rafael Flores
@@ -18,20 +18,14 @@
       {{ button.title }}
     </v-btn>
 
-    <v-row class="u-positioned-bottom">
-      <v-col cols="12">
-        <v-btn v-for="button in socialButtons" :key="button" icon>
-          <v-icon dark>
-            {{ button }}
-          </v-icon>
-        </v-btn>
-      </v-col>
-    </v-row>
+    <social-buttons class="u-positioned-bottom" />
   </v-navigation-drawer>
 </template>
 
 <script>
+import SocialButtons from "./SocialButtons.vue";
 export default {
+  components: { SocialButtons },
   props: ["headerPositions"],
   data() {
     return {
@@ -78,7 +72,6 @@ export default {
     },
   },
   mounted() {
-    alert(this.headerPositions);
     for (let i in this.headerPositions) {
       console.log(this.headerPositions[i]);
       this.headingButtons[i].height = this.headerPositions[i];

@@ -2,7 +2,7 @@
   <v-container fluid class="header" style="padding: 2rem">
     <v-row>
       <v-col>
-        <h1>Who I am.</h1>
+        <h1 class="viewport">Who I am.</h1>
       </v-col>
     </v-row>
     <v-row>
@@ -35,22 +35,114 @@
 
     <v-row>
       <v-col>
-        <h1>What I can do for you.</h1>
+        <h1 class="viewport">What I can do for you.</h1>
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="6">
-        <v-expansion-panels>
+        <v-expansion-panels dark hover>
           <v-expansion-panel v-for="(panel, i) in expansionPanels" :key="i">
             <v-expansion-panel-header>
               {{ panel.header }}
             </v-expansion-panel-header>
-            <v-expasion-panel-content>
+            <v-expansion-panel-content>
               {{ panel.content }}
-            </v-expasion-panel-content>
+            </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
       </v-col>
+    </v-row>
+
+    <div class="class u-bottom-spacing"></div>
+    <v-row>
+      <v-col>
+        <h1 class="viewport">Where I've been.</h1>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <v-timeline>
+          <v-timeline-item
+            v-for="(time, i) in timeline"
+            :key="i"
+            :color="colors.primary"
+            dark
+          >
+            <span slot="opposite">Year</span>
+            <v-card dark hover>
+              <v-card-title class="highlight">
+                Lorem Ipsum Dolor
+              </v-card-title>
+              <v-card-text>
+                <p>
+                  Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+                  scaevola imperdiet
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+        </v-timeline>
+      </v-col>
+    </v-row>
+    <div class="class u-bottom-spacing"></div>
+
+    <v-row>
+      <v-col>
+        <h1 class="viewport">What I know.</h1>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-spacer></v-spacer>
+      <v-col cols="3">
+        <v-row
+          ><v-col><h2>My Education</h2></v-col></v-row
+        >
+        <v-row
+          v-for="i in 4"
+          :key="i"
+          style="border-left: 2px white solid; margin-bottom: 2rem;"
+        >
+          <v-col>
+            <h4>State University</h4>
+          </v-col>
+          <v-col style="text-align: right;">
+            <h4 class="highlight">Certificate of Completion</h4>
+            <p>Computer Sciences</p>
+            <p>2000-2010</p>
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <v-spacer></v-spacer>
+      <v-col cols="3">
+        <v-row>
+          <v-col>
+            <h2>My Skills</h2>
+          </v-col>
+        </v-row>
+        <div v-for="i in 3" :key="i">
+          <v-row>
+            <v-col>
+              <h3>Graphics Media</h3>
+            </v-col>
+          </v-row>
+          <v-row v-for="i in 4" :key="i">
+            <v-col>
+              Skill 1
+            </v-col>
+            <v-col>
+              <v-rating
+                v-model="rating"
+                background-color="orange lighten-3"
+                color="orange"
+                readonly
+              ></v-rating>
+            </v-col>
+          </v-row>
+        </div>
+      </v-col>
+      <v-spacer></v-spacer>
     </v-row>
   </v-container>
 </template>
@@ -59,6 +151,13 @@
 export default {
   data() {
     return {
+      colors: {
+        primary: "#c5a880",
+        secondary: "#532e1c",
+        dark: "#0f0f0f",
+        light: "e6e6e6",
+      },
+      rating: 4,
       expansionPanels: [
         {
           header: "Web Development",
@@ -81,6 +180,32 @@ export default {
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor. Lorem ipsum dolor sit amet consectetur adipisicing elit, eiusmod tempor. Proin luctus nulla elit, vitae varius massa.Etiam massa sapien, ultricies quis enim at, tempor fringilla metus. Nulla rhoncus enim sed consectetur. Mauris et eros feugiat, tincidunt eget, dictum neque. Maecenas dapibus sodales magna, eget lectus vehicula non",
         },
       ],
+      timeline: [
+        {
+          title: "LOREM IPSUM DOLOR",
+          content:
+            "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet",
+          year: "2000",
+        },
+        {
+          title: "LOREM IPSUM DOLOR",
+          content:
+            "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet",
+          year: "2000",
+        },
+        {
+          title: "LOREM IPSUM DOLOR",
+          content:
+            "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet",
+          year: "2000",
+        },
+        {
+          title: "LOREM IPSUM DOLOR",
+          content:
+            "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet",
+          year: "2000",
+        },
+      ],
     };
   },
 };
@@ -88,7 +213,8 @@ export default {
 
 <style>
 .header {
-  background-color: #0f0f0f;
+  background-color: #532e1c;
+  height: 500vh;
 }
 .col {
   color: #e6e6e6;
@@ -114,6 +240,6 @@ export default {
 .u-bottom-spacing {
   content: "";
   display: block;
-  height: 10%;
+  height: 6rem;
 }
 </style>

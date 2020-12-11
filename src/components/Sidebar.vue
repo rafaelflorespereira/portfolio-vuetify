@@ -6,15 +6,16 @@
     </h2>
     <div class="subheading__sub">Front-end Developer</div>
     <v-btn
-      v-for="button in headingButtons"
-      :key="button"
+      v-for="(button, i) in headingButtons"
+      :key="i"
       text
       dark
       small
       block
       style="margin: 1rem auto;"
+      @click="scrollTo(button.height)"
     >
-      {{ button }}
+      {{ button.title }}
     </v-btn>
 
     <v-row class="u-positioned-bottom">
@@ -31,19 +32,57 @@
 
 <script>
 export default {
+  props: ["headerPositions"],
   data() {
     return {
       headingButtons: [
-        "About Me",
-        "Services",
-        "Experience",
-        "Skills & Education",
-        "Portfolio",
-        "Clients",
-        "Contact",
+        {
+          title: "About Me",
+          height: 1218,
+        },
+        {
+          title: "Services",
+          height: 2100,
+        },
+        {
+          title: "Experience",
+          height: "",
+        },
+        {
+          title: "Skills & Education",
+          height: "",
+        },
+        {
+          title: "Portfolio",
+          height: "",
+        },
+        {
+          title: "Clients",
+          height: "",
+        },
+        {
+          title: "Contact",
+          height: "",
+        },
       ],
       socialButtons: ["mdi-facebook", "mdi-linkedin", "mdi-github"],
     };
+  },
+  methods: {
+    scrollTo(height) {
+      window.scrollTo({
+        top: height,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+  },
+  mounted() {
+    alert(this.headerPositions);
+    for (let i in this.headerPositions) {
+      console.log(this.headerPositions[i]);
+      this.headingButtons[i].height = this.headerPositions[i];
+    }
   },
 };
 </script>

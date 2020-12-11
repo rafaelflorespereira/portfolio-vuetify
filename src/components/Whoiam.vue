@@ -144,6 +144,74 @@
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <div class="class u-bottom-spacing"></div>
+
+    <v-row>
+      <v-col>
+        <h1 class="viewport">What I've done.</h1>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col>
+        <v-carousel dark hide-delimiter-background :show-arrows="false">
+          <v-carousel-item v-for="i in 5" :key="i">
+            <v-row>
+              <v-col>
+                <v-row>
+                  <v-col>
+                    project details
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col>
+                    Project info
+                  </v-col>
+                </v-row>
+              </v-col>
+              <v-col>
+                project image
+              </v-col>
+            </v-row>
+          </v-carousel-item>
+        </v-carousel>
+      </v-col>
+    </v-row>
+    <div class="class u-bottom-spacing"></div>
+
+    <v-row>
+      <v-col>
+        <h1 class="viewport">What my clients say.</h1>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="4" v-for="i in 9" :key="i">
+        <v-col>
+          <v-icon large :color="colors.primary">
+            mdi-message-text
+          </v-icon>
+          <p>
+            Aliquam sit amet eros id lorem posuere lobortis ut id enim. Proin
+            ullamcorper fringilla risus et lacinia.Aliquam eget lacus a libero.
+          </p>
+        </v-col>
+        <v-col>
+          <v-row justify="end">
+            <v-col align="end">
+              <p><span class="highlight">Company's Name</span> Client's Name</p>
+            </v-col>
+
+            <v-avatar :color="colors.primary" size="56"></v-avatar>
+          </v-row>
+        </v-col>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col>
+        <h1 class="viewport">Let's talk.</h1>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -214,7 +282,7 @@ export default {
 <style>
 .header {
   background-color: #532e1c;
-  height: 500vh;
+  height: 700vh;
 }
 .col {
   color: #e6e6e6;

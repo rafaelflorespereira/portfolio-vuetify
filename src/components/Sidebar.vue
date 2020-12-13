@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app permanent left dark>
+  <v-navigation-drawer app permanent left>
     <h1 class="siglas">RF</h1>
     <h2 class="subheading">
       Rafael Flores
@@ -9,7 +9,6 @@
       v-for="(button, i) in headingButtons"
       :key="i"
       text
-      dark
       small
       block
       style="margin: 1rem auto;"
@@ -82,8 +81,8 @@ export default {
 
 <style>
 .siglas {
+  color: var(--v-primary-base);
   font-size: 4rem;
-  color: #c5a880;
   margin: 0 auto;
   margin-bottom: -1rem;
   padding: 0 15%;
@@ -91,7 +90,7 @@ export default {
   text-align: center;
 }
 .subheading {
-  color: #e6e6e6;
+  color: var(--v-secondary-base);
   font-size: 1.6rem;
   font-weight: 400;
   margin: 1rem auto;
@@ -99,7 +98,6 @@ export default {
   text-align: center;
 }
 .subheading__sub {
-  color: #e6e6e6;
   text-align: center;
   margin: 1rem;
 }

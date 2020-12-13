@@ -6,7 +6,9 @@
     >
       <div class="header__text">
         Rafael Flores
-        <span class="header__colored">Front-end Developer</span>
+        <span color="secondary" class="header__colored"
+          >Front-end Developer</span
+        >
       </div>
     </v-img>
   </div>
@@ -16,18 +18,18 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 .header {
   height: 100vh;
 }
 .header__text {
+  color: var(--v-primary-base);
   position: absolute;
   bottom: 1vh;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
   right: 0;
-  color: #e6e6e6;
   margin: 0 1rem;
   font-size: 300%;
   font-weight: 300;
@@ -36,7 +38,7 @@ export default {};
   line-height: 130%;
 }
 .header__colored {
-  color: #c5a880;
+  color: var(--v-secondary-base);
   font-size: 200%;
 }
 .u-bottom-positioned {

@@ -1,8 +1,17 @@
 <template>
-  <v-app>
+  <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
     <sidebar :headerPositions="buttonsPositions" />
+
     <v-main>
       <my-header />
+      <v-switch
+        top
+        right
+        absolute
+        label="darkMode"
+        v-model="$vuetify.theme.dark"
+        >Dark Mode</v-switch
+      >
       <whoiam />
     </v-main>
   </v-app>
@@ -27,6 +36,12 @@ export default {
     // See how it is done in the vuetify doc.
     buttonsPositions: [],
   }),
+
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? "dark" : "light";
+    },
+  },
 
   mounted() {
     let elem = document.querySelectorAll(".viewport");

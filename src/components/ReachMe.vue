@@ -52,7 +52,7 @@
           </v-col>
         </v-row>
         <SocialButtons />
-        <v-row v-for="contact in socialContacts" :key="contact">
+        <v-row v-for="(contact, i) in socialContacts" :key="i">
           <v-col>
             <p>
               <span>

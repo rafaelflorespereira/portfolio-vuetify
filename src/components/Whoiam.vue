@@ -65,7 +65,7 @@
           <v-timeline-item
             v-for="(time, i) in timeline"
             :key="i"
-            :color="colors.primary"
+            color="primary"
             dark
           >
             <span slot="opposite">Year</span>
@@ -121,7 +121,7 @@
             <h2>My Skills</h2>
           </v-col>
         </v-row>
-        <div v-for="i in 3" :key="i">
+        <div v-for="i in 2" :key="i">
           <v-row>
             <v-col>
               <h3>Graphics Media</h3>
@@ -157,10 +157,24 @@
         <v-carousel dark hide-delimiter-background :show-arrows="false">
           <v-carousel-item v-for="i in 5" :key="i">
             <v-row>
+              <v-col align="center">
+                <h3>Project Name</h3>
+                <h4>What has done</h4>
+              </v-col>
+            </v-row>
+            <v-row>
               <v-col>
                 <v-row>
                   <v-col>
-                    project details
+                    <h3>Project Details</h3>
+                    <p>
+                      In ac felis quis tortor malesuada pretium. Phasellus
+                      dolor. Fusce fermentum odio nec arcu. Integer tincidunt.
+                      Cum sociis natoque penatibus et magnis dis parturient
+                      montes, nascetur ridiculus mus. In ac felis quis tortor
+                      malesuada pretium. Phasellus dolor. Fusce fermentum odio
+                      nec arcu. Integer tincidunt.
+                    </p>
                   </v-col>
                 </v-row>
                 <v-row>
@@ -168,7 +182,29 @@
                     Project info
                   </v-col>
                 </v-row>
+                <v-row>
+                  <v-col>
+                    <p>
+                      <span><v-icon dark>mdi mdi-account</v-icon></span> Client
+                      Name
+                    </p>
+                    <p>
+                      <span><v-icon dark>mdi mdi-calendar</v-icon></span>
+                      Project Date
+                    </p>
+                    <p>
+                      <span><v-icon dark>mdi mdi-tag</v-icon></span> Project
+                      Category
+                    </p>
+                  </v-col>
+                  <v-col>
+                    <p style="font-size: 80%">Client's name</p>
+                    <p style="font-size: 80%">date</p>
+                    <p style="font-size: 80%">Categories</p>
+                  </v-col>
+                </v-row>
               </v-col>
+              <v-spacer></v-spacer>
               <v-col>
                 project image
               </v-col>
@@ -187,7 +223,7 @@
     <v-row>
       <v-col cols="4" v-for="i in 6" :key="i">
         <v-col>
-          <v-icon large :color="colors.primary">
+          <v-icon large color="primary">
             mdi-message-text
           </v-icon>
           <p>
@@ -201,14 +237,14 @@
               <p><span class="highlight">Company's Name</span> Client's Name</p>
             </v-col>
 
-            <v-avatar :color="colors.primary" size="56"></v-avatar>
+            <v-avatar color="primary" size="56"></v-avatar>
           </v-row>
         </v-col>
       </v-col>
     </v-row>
     <div class="class u-bottom-spacing"></div>
 
-    <reach-me />
+    <ReachMe />
   </v-container>
 </template>
 
@@ -221,12 +257,6 @@ export default {
   },
   data() {
     return {
-      colors: {
-        primary: "#c5a880",
-        secondary: "#532e1c",
-        dark: "#0f0f0f",
-        light: "e6e6e6",
-      },
       rating: 4,
       expansionPanels: [
         {
@@ -282,15 +312,7 @@ export default {
 </script>
 
 <style>
-.header {
-  background-color: #532e1c;
-  height: 700vh;
-}
-.col {
-  color: #e6e6e6;
-}
 .col h1 {
-  color: #c5a880;
   font-size: 3rem;
 }
 .col h2 {
@@ -299,12 +321,10 @@ export default {
   font-weight: 400;
 }
 .col h3 {
-  color: #c5a880;
   font-weight: 500;
   font-size: 1.6rem;
 }
 .highlight {
-  color: #c5a880;
   text-transform: uppercase;
 }
 .u-bottom-spacing {

@@ -40,7 +40,7 @@
               placeholder="Subject"
               color="black"
             ></v-text-field>
-            <v-btn dark large type="submit">Submit</v-btn>
+            <v-btn dark large color="primary" type="submit">Submit</v-btn>
           </v-col>
         </v-row>
       </v-col>
@@ -56,7 +56,7 @@
           <v-col>
             <p>
               <span>
-                <v-icon dark x-large>
+                <v-icon color="primary" dark x-large>
                   {{ contact.icon }}
                 </v-icon>
               </span>
@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import SocialButtons from "./SocialButtons";
+import SocialButtons from "../SocialButtons";
 
 export default {
   components: {

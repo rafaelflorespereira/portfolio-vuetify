@@ -12,10 +12,9 @@
             v-for="(time, i) in timeline"
             :key="i"
             color="primary"
-            dark
           >
             <span slot="opposite">Year</span>
-            <v-card dark hover>
+            <v-card hover>
               <v-card-title class="highlight">
                 Lorem Ipsum Dolor
               </v-card-title>

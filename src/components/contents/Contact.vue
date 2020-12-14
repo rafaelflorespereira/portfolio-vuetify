@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="contact">
     <v-row>
       <v-col>
         <h1 class="viewport">Let's talk.</h1>

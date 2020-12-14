@@ -12,7 +12,7 @@
       small
       block
       style="margin: 1rem auto;"
-      @click="scrollTo(button.height)"
+      :href="button.height"
     >
       {{ button.title }}
     </v-btn>
@@ -31,55 +31,43 @@ export default {
       headingButtons: [
         {
           title: "About Me",
-          height: 1218,
+          height: "#aboutme",
         },
         {
           title: "Services",
-          height: 2100,
+          height: "#services",
         },
         {
           title: "Experience",
-          height: "",
+          height: "#experience",
         },
         {
           title: "Skills & Education",
-          height: "",
+          height: "#skills-education",
         },
         {
           title: "Portfolio",
-          height: "",
+          height: "#portfolio",
         },
         {
           title: "Clients",
-          height: "",
+          height: "#clients",
         },
         {
           title: "Contact",
-          height: "",
+          height: "#contact",
         },
       ],
       socialButtons: ["mdi-facebook", "mdi-linkedin", "mdi-github"],
     };
   },
-  methods: {
-    scrollTo(height) {
-      window.scrollTo({
-        top: height,
-        left: 0,
-        behavior: "smooth",
-      });
-    },
-  },
-  mounted() {
-    for (let i in this.headerPositions) {
-      console.log(this.headerPositions[i]);
-      this.headingButtons[i].height = this.headerPositions[i];
-    }
-  },
 };
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
 .siglas {
   color: var(--v-primary-base);
   font-size: 4rem;

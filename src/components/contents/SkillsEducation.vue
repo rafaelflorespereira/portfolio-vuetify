@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="skills-education">
     <v-row>
       <v-col>
         <h1 class="viewport">What I know.</h1>

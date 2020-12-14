@@ -46,13 +46,13 @@
 <script>
 import Sidebar from "./components/Sidebar";
 import MyHeader from "./components/Header";
-import Whoiam from "./components/contents/Whoiam";
-import Whatiknow from "./components/contents/Whatiknow";
-import Whatcanido from "./components/contents/Whatcanido.vue";
-import Whatidone from "./components/contents/Whatidone";
-import Whereibeen from "./components/contents/Whereibeen.vue";
-import Whatclients from "./components/contents/Whatclients.vue";
-import ReachMe from "./components/contents/ReachMe";
+import Whoiam from "./components/contents/AboutMe";
+import Whatiknow from "./components/contents/SkillsEducation";
+import Whatcanido from "./components/contents/Services.vue";
+import Whatidone from "./components/contents/Portfolio";
+import Whereibeen from "./components/contents/Experience.vue";
+import Whatclients from "./components/contents/Clients";
+import ReachMe from "./components/contents/Contact";
 
 export default {
   name: "App",

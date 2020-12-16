@@ -17,7 +17,6 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-spacer />
               <v-col>
                 <v-row>
                   <v-col>
@@ -26,9 +25,6 @@
                       In ac felis quis tortor malesuada pretium. Phasellus
                       dolor. Fusce fermentum odio nec arcu. Integer tincidunt.
                       Cum sociis natoque penatibus et magnis dis parturient
-                      montes, nascetur ridiculus mus. In ac felis quis tortor
-                      malesuada pretium. Phasellus dolor. Fusce fermentum odio
-                      nec arcu. Integer tincidunt.
                     </p>
                   </v-col>
                 </v-row>
@@ -59,7 +55,6 @@
                   </v-col>
                 </v-row>
               </v-col>
-              <v-spacer />
               <v-col>
                 project image
 
@@ -82,7 +77,6 @@
                   </template>
                 </v-img>
               </v-col>
-              <v-spacer />
             </v-row>
           </v-carousel-item>
         </v-carousel>

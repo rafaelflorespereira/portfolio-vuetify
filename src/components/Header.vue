@@ -4,7 +4,7 @@
       src="../../public/laptop-red-cup-coffee-notebook-pen-satchel-1.jpg"
       height="100vh"
     >
-      <div class="header__text">
+      <div class="header__text slideInAnimation">
         Rafael Flores
         <span color="secondary" class="header__colored"
           >Front-end Developer</span
@@ -43,5 +43,20 @@ export default {};
 }
 .u-bottom-positioned {
   align-items: flex-end;
+}
+.slideInAnimation {
+  animation: moveInLeft ease-out 0.7s;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 </style>

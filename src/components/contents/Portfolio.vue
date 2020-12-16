@@ -8,7 +8,7 @@
 
     <v-row>
       <v-col>
-        <v-carousel dark hide-delimiter-background :show-arrows="false">
+        <v-carousel hide-delimiter-background :show-arrows="false">
           <v-carousel-item v-for="i in 5" :key="i">
             <v-row>
               <v-col align="center">
@@ -40,16 +40,14 @@
                 <v-row>
                   <v-col>
                     <p>
-                      <span><v-icon dark>mdi mdi-account</v-icon></span> Client
-                      Name
+                      <span><v-icon>mdi mdi-account</v-icon></span> Client Name
                     </p>
                     <p>
-                      <span><v-icon dark>mdi mdi-calendar</v-icon></span>
+                      <span><v-icon>mdi mdi-calendar</v-icon></span>
                       Project Date
                     </p>
                     <p>
-                      <span><v-icon dark>mdi mdi-tag</v-icon></span> Project
-                      Category
+                      <span><v-icon>mdi mdi-tag</v-icon></span> Project Category
                     </p>
                   </v-col>
                   <v-col>

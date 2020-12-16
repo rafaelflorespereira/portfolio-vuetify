@@ -38,29 +38,4 @@
 export default {};
 </script>
 
-<style>
-.col h1 {
-  font-size: 3rem;
-  color: var(--v-primary-base);
-}
-.col h2 {
-  color: var(--v-primary-base);
-  font-size: 250%;
-  padding-left: 2rem;
-  font-weight: 400;
-}
-.col h3 {
-  color: var(--v-secondary-base);
-  font-weight: 500;
-  font-size: 1.6rem;
-}
-.highlight {
-  color: var(--v-primary-base);
-  text-transform: uppercase;
-}
-.u-bottom-spacing {
-  content: "";
-  display: block;
-  height: 6rem;
-}
-</style>
+<style></style>

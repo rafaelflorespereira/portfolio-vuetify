@@ -81,7 +81,7 @@ export default {
       socialContacts: [
         {
           icon: "mdi mdi-map-marker",
-          content: "My location is...",
+          content: "Montes Claros, Brazil",
         },
         {
           icon: "mdi mdi-email",

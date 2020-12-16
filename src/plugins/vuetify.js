@@ -9,10 +9,10 @@ export default new Vuetify({
     dark: false,
     themes: {
       light: {
-        primary: "#ffb396",
-        secondary: "#532e1c",
-        anchor: "#e6e6e6",
-        background: "#c5a880",
+        primary: "#ff4646",
+        secondary: "#ff8585",
+        anchor: "#ffb396",
+        background: "#fff5c0",
       },
     },
   },

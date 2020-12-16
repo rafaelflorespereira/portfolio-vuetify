@@ -2,7 +2,9 @@
   <div id="aboutme">
     <v-row>
       <v-col>
-        <h1 class="viewport">Who I am.</h1>
+        <h1 class="headersAnimations">
+          Who I am.
+        </h1>
       </v-col>
     </v-row>
     <v-row>

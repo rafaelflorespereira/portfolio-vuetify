@@ -4,17 +4,12 @@
 
     <v-main>
       <my-header />
-      <v-switch
-        top
-        right
-        absolute
-        label="darkMode"
-        v-model="$vuetify.theme.dark"
+      <v-switch label="darkMode" v-model="$vuetify.theme.dark"
         >Dark Mode</v-switch
       >
 
       <v-container fluid class="header" style="padding: 2rem">
-        <Whoiam class="slideUpAnimation" />
+        <Aboutme class="slideUpAnimation" />
         <div class="class u-bottom-spacing"></div>
 
         <Whatcanido class="slideUpAnimation" />
@@ -46,7 +41,7 @@
 <script>
 import Sidebar from "./components/Sidebar";
 import MyHeader from "./components/Header";
-import Whoiam from "./components/contents/AboutMe";
+import Aboutme from "./components/contents/AboutMe";
 import Whatiknow from "./components/contents/SkillsEducation";
 import Whatcanido from "./components/contents/Services.vue";
 import Whatidone from "./components/contents/Portfolio";
@@ -60,7 +55,7 @@ export default {
   components: {
     Sidebar,
     MyHeader,
-    Whoiam,
+    Aboutme,
     Whatcanido,
     Whereibeen,
     Whatiknow,
@@ -80,7 +75,6 @@ export default {
       return this.$vuetify.theme.dark ? "dark" : "light";
     },
   },
-
 };
 </script>
 
@@ -122,5 +116,14 @@ export default {
     opacity: 1;
     transform: translate(0);
   }
+}
+.headersAnimations {
+  display: inline-block;
+  transition: all 0.2s;
+}
+.headersAnimations:hover {
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.45);
 }
 </style>

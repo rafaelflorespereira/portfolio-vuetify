@@ -2,7 +2,9 @@
   <div id="experience">
     <v-row>
       <v-col>
-        <h1 class="viewport">Where I've been.</h1>
+        <h1 class=" headersAnimations">
+          Where I've been.
+        </h1>
       </v-col>
     </v-row>
     <v-row>
@@ -13,7 +15,7 @@
             :key="i"
             color="primary"
           >
-            <span slot="opposite">{{time.year}}</span>
+            <span slot="opposite">{{ time.year }}</span>
             <v-icon slot="icon">mdi mdi-map</v-icon>
             <v-card hover>
               <v-card-title class="highlight">

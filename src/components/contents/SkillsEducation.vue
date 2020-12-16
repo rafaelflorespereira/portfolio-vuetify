@@ -2,7 +2,9 @@
   <div id="skills-education">
     <v-row>
       <v-col>
-        <h1 class="viewport">What I know.</h1>
+        <h1 class="headersAnimations">
+          What I know.
+        </h1>
       </v-col>
     </v-row>
 

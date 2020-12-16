@@ -2,7 +2,9 @@
   <div id="services">
     <v-row>
       <v-col>
-        <h1 class="viewport">What I can do for you.</h1>
+        <h1 class="headersAnimations">
+          What I can do for you.
+        </h1>
       </v-col>
     </v-row>
     <v-row>

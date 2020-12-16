@@ -2,7 +2,9 @@
   <div id="contact">
     <v-row>
       <v-col>
-        <h1 class="viewport">Let's talk.</h1>
+        <h1 class="headersAnimations">
+          Let's talk.
+        </h1>
       </v-col>
     </v-row>
     <v-row>
@@ -24,7 +26,6 @@
               solo-inverted
               placeholder="Name"
               color="primary"
-              autofocus
             ></v-text-field>
             <v-text-field
               outlined

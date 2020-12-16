@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer app permanent left>
-    <h1 class="siglas">RF</h1>
+    <h1 class="siglas" @click="goTop">RF</h1>
     <h2 class="subheading">
       Rafael Flores
     </h2>
@@ -61,6 +61,11 @@ export default {
       socialButtons: ["mdi-facebook", "mdi-linkedin", "mdi-github"],
     };
   },
+  methods: {
+    goTop() {
+      window.scrollTo(0, 0);
+    },
+  },
 };
 </script>
 
@@ -71,11 +76,16 @@ html {
 .siglas {
   color: var(--v-primary-base);
   font-size: 4rem;
-  margin: 0 auto;
+  margin: 0 0;
   margin-bottom: -1rem;
-  padding: 0 15%;
+  padding: 0;
   display: block;
   text-align: center;
+  transition: all 1s;
+}
+.siglas:hover {
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 1.5rem rgba(0, 0, 0, 0.85);
 }
 .subheading {
   color: var(--v-secondary-base);

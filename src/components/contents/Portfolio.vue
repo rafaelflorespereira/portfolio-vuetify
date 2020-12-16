@@ -2,20 +2,22 @@
   <div id="portfolio">
     <v-row>
       <v-col>
-        <h1 class="viewport">What I've done.</h1>
+        <h1 class="headersAnimations">
+          What I've done.
+        </h1>
       </v-col>
     </v-row>
 
     <v-row>
       <v-col>
-        <v-carousel hide-delimiter-background :show-arrows="false">
+        <v-row>
+          <v-col align="center">
+            <h3>Project Name</h3>
+            <h4>What has done</h4>
+          </v-col>
+        </v-row>
+        <v-carousel cycle hide-delimiter-background :show-arrows="false">
           <v-carousel-item v-for="i in 5" :key="i">
-            <v-row>
-              <v-col align="center">
-                <h3>Project Name</h3>
-                <h4>What has done</h4>
-              </v-col>
-            </v-row>
             <v-row>
               <v-col>
                 <v-row>

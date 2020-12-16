@@ -2,7 +2,9 @@
   <div id="clients">
     <v-row>
       <v-col>
-        <h1 class="viewport">What my clients say.</h1>
+        <h1 class="headersAnimations">
+          What my clients say.
+        </h1>
       </v-col>
     </v-row>
     <v-row>
@@ -21,7 +23,10 @@
             <v-col>
               <p><span class="highlight">Company's Name</span> Client's Name</p>
               <v-avatar color="primary" size="56">
-                <img :src="'https://randomuser.me/api/portraits/men/'+ i +'.jpg'" alt="client´s avatar">
+                <img
+                  :src="'https://randomuser.me/api/portraits/men/' + i + '.jpg'"
+                  alt="client´s avatar"
+                />
               </v-avatar>
             </v-col>
           </v-row>

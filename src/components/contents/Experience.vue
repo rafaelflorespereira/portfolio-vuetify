@@ -13,16 +13,15 @@
             :key="i"
             color="primary"
           >
-            <span slot="opposite">Year</span>
-
+            <span slot="opposite">{{time.year}}</span>
+            <v-icon slot="icon">mdi mdi-map</v-icon>
             <v-card hover>
               <v-card-title class="highlight">
-                Lorem Ipsum Dolor
+                {{ time.title }}
               </v-card-title>
               <v-card-text>
                 <p>
-                  Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
-                  scaevola imperdiet
+                  {{ time.content }}
                 </p>
               </v-card-text>
             </v-card>
@@ -45,19 +44,19 @@ export default {
           year: "2000",
         },
         {
-          title: "LOREM IPSUM DOLOR",
+          title: "LOREM IPSUM DdsfasdfasdfOLOR",
           content:
             "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet",
           year: "2000",
         },
         {
-          title: "LOREM IPSUM DOLOR",
+          title: "LOREMasdfasdf IPSUM DOLOR",
           content:
             "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet",
           year: "2000",
         },
         {
-          title: "LOREM IPSUM DOLOR",
+          title: "LOREM IPSUM asfdasfdsda",
           content:
             "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet",
           year: "2000",

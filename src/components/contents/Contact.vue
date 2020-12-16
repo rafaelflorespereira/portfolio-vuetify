@@ -22,24 +22,28 @@
             <v-text-field
               outlined
               solo-inverted
-              dark
               placeholder="Name"
-              color="black"
+              color="primary"
+              autofocus
             ></v-text-field>
             <v-text-field
               outlined
               solo-inverted
-              dark
               placeholder="Email"
-              color="black"
+              color="primary"
             ></v-text-field>
             <v-text-field
               outlined
               solo-inverted
-              dark
               placeholder="Subject"
-              color="black"
+              color="primary"
             ></v-text-field>
+            <v-textarea
+              outlined
+              solo-inverted
+              placeholder="Content"
+              color="primary"
+            ></v-textarea>
             <v-btn dark large color="primary" type="submit">Submit</v-btn>
           </v-col>
         </v-row>
@@ -97,4 +101,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.theme--light.v-input input,
+.theme--light.v-input textarea {
+  color: var(--v-primary-base);
+}
+</style>

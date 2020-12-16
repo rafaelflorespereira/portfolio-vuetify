@@ -81,13 +81,6 @@ export default {
     },
   },
 
-  mounted() {
-    let elem = document.querySelectorAll(".viewport");
-    for (let index = 0; index < elem.length; index++) {
-      let rect = elem[index].getBoundingClientRect();
-      this.buttonsPositions.push(rect.top);
-    }
-  },
 };
 </script>
 

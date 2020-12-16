@@ -18,11 +18,12 @@
         </v-col>
         <v-col>
           <v-row justify="end">
-            <v-col align="end">
+            <v-col>
               <p><span class="highlight">Company's Name</span> Client's Name</p>
+              <v-avatar color="primary" size="56">
+                <img :src="'https://randomuser.me/api/portraits/men/'+ i +'.jpg'" alt="client´s avatar">
+              </v-avatar>
             </v-col>
-
-            <v-avatar color="primary" size="56"></v-avatar>
           </v-row>
         </v-col>
       </v-col>

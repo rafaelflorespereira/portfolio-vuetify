@@ -1,10 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
-import vuetify from './plugins/vuetify';
+import Vue from "vue";
+import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
+import VueWaypoint from "vue-waypoint";
 
-Vue.config.productionTip = false
+// Waypoint plugin
+Vue.use(VueWaypoint);
+Vue.config.productionTip = false;
 
 new Vue({
   vuetify,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");

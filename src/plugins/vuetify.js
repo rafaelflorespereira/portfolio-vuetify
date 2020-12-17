@@ -11,6 +11,7 @@ export default new Vuetify({
       light: {
         primary: "#ffb396",
         secondary: "#532e1c",
+        tertiary: "#e6e6e6",
         anchor: "#e6e6e6",
         background: "#8e8e8e",
       },

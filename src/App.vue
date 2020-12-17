@@ -9,30 +9,79 @@
       >
 
       <v-container fluid class="header" style="padding: 2rem">
-        <Aboutme class="slideUpAnimation" />
+        <Aboutme
+          id="aboutme"
+          v-waypoint="{
+            active: true,
+            callback: onWaypoint,
+            options: intersectionOptions,
+          }"
+        />
         <div class="class u-bottom-spacing"></div>
 
-        <Whatcanido class="slideUpAnimation" />
+        <Whatcanido
+          id="services"
+          v-waypoint="{
+            active: true,
+            callback: onWaypoint,
+            options: intersectionOptions,
+          }"
+        />
 
         <div class="class u-bottom-spacing"></div>
 
-        <Whereibeen class="slideUpAnimation" />
+        <Whereibeen
+          id="experience"
+          v-waypoint="{
+            active: true,
+            callback: onWaypoint,
+            options: intersectionOptions,
+          }"
+        />
 
         <div class="class u-bottom-spacing"></div>
 
-        <Whatiknow class="slideUpAnimation" />
+        <Whatiknow
+          id="skills-education"
+          v-waypoint="{
+            active: true,
+            callback: onWaypoint,
+            options: intersectionOptions,
+          }"
+        />
 
         <div class="class u-bottom-spacing"></div>
 
-        <Whatidone class="slideUpAnimation" />
+        <Whatidone
+          id="portfolio"
+          v-waypoint="{
+            active: true,
+            callback: onWaypoint,
+            options: intersectionOptions,
+          }"
+        />
 
         <div class="class u-bottom-spacing"></div>
 
-        <Whatclients class="slideUpAnimation" />
+        <Whatclients
+          id="clients"
+          v-waypoint="{
+            active: true,
+            callback: onWaypoint,
+            options: intersectionOptions,
+          }"
+        />
 
         <div class="class u-bottom-spacing"></div>
 
-        <ReachMe />
+        <ReachMe
+          id="contact"
+          v-waypoint="{
+            active: true,
+            callback: onWaypoint,
+            options: intersectionOptions,
+          }"
+        />
       </v-container>
     </v-main>
   </v-app>
@@ -68,11 +117,50 @@ export default {
     // THEME LIGHT V-APPlication change the my color.
     // See how it is done in the vuetify doc.
     buttonsPositions: [],
+    intersectionOptions: {
+      root: null,
+      rootMargin: "0px 0px 0px 0px",
+      threshold: [0, 1], // [0.25, 0.75] if you want a 25% offset!
+    },
   }),
 
   computed: {
     theme() {
       return this.$vuetify.theme.dark ? "dark" : "light";
+    },
+  },
+  methods: {
+    onWaypoint({ el, going }) {
+      // going: in, out
+      // direction: top, right, bottom, left
+      if (going === this.$waypointMap.GOING_IN) {
+        switch (el.id) {
+          case "aboutme":
+            el.className = "slideUpAnimation";
+            break;
+          case "services":
+            el.className = "slideUpAnimation";
+            break;
+          case "experience":
+            el.className = "slideUpAnimation";
+            break;
+          case "skills-education":
+            el.className = "slideUpAnimation";
+            break;
+          case "portfolio":
+            el.className = "slideUpAnimation";
+            break;
+          case "clients":
+            el.className = "slideUpAnimation";
+            break;
+          case "contact":
+            el.className = "slideUpAnimation";
+            break;
+          default:
+            break;
+        }
+        console.log("waypoint going in!");
+      }
     },
   },
 };
@@ -104,7 +192,7 @@ export default {
   height: 6rem;
 }
 .slideUpAnimation {
-  animation: moveInBottom 2s ease-in 0.5s;
+  animation: moveInBottom 1.2s ease-in 0.5s;
   animation-fill-mode: backwards;
 }
 @keyframes moveInBottom {

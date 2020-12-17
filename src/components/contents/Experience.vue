@@ -17,7 +17,7 @@
           >
             <span slot="opposite">{{ time.year }}</span>
             <v-icon slot="icon">mdi mdi-map</v-icon>
-            <v-card :color="i % 2 ? 'background' : 'secondary'" hover>
+            <v-card :color="i % 2 ? 'secondary' : 'tertiary'" hover>
               <v-card-title class="highlight">
                 {{ time.title }}
               </v-card-title>

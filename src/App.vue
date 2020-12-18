@@ -4,7 +4,10 @@
 
     <v-main>
       <my-header />
-      <v-switch label="darkMode" v-model="$vuetify.theme.dark"
+      <v-switch
+        label="darkMode"
+        style="display:inline-block"
+        v-model="$vuetify.theme.dark"
         >Dark Mode</v-switch
       >
 
@@ -129,6 +132,7 @@ export default {
       return this.$vuetify.theme.dark ? "dark" : "light";
     },
   },
+
   methods: {
     onWaypoint({ el, going }) {
       // going: in, out
